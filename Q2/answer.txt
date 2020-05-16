@@ -1,0 +1,41 @@
+import java.util.*;
+class solution 
+{
+    public int singleNumber(int[] nums)
+    {
+        int count = 0;
+        int i;
+        for(i=0; i<nums.length; i++)
+        {
+            for(int j=0; j<nums.length; j++)
+            {
+                if(nums[i]==nums[j])
+                    count ++;
+                System.out.println("..");
+            }
+            
+            if(count == 1)
+                break; 
+            
+            else 
+            count =0;
+        }
+        
+        
+        return nums[i];     
+        
+        
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		int[] arr = {2,1,2};
+		
+		solution ob = new solution();
+		System.out.println(ob.singleNumber(arr));
+		
+	}
+}
