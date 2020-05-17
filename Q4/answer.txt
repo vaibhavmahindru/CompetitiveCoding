@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Solution 
+{
+    public boolean isHappy(int n) 
+    {
+        HashSet<Integer> set=new HashSet(); 
+        while(set.add(n))
+        {
+        int sum = 0;
+        int n2;
+        while(n>0)
+        {
+            n2 = n%10;
+            n = n/10;
+            sum = sum + (n2*n2);
+            
+        }
+        
+        n = sum;
+        
+        if(n == 1)
+            return true ;
+        
+        }
+        return false ;
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		
+		Solution ob = new Solution();
+		System.out.println(ob.isHappy(n));
+		
+	}
+}
