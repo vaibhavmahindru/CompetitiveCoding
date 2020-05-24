@@ -1,0 +1,7 @@
+Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from 1 to 100 for three categories: problem clarity, originality, and difficulty.
+
+Your task is to find their comparison points by comparing a[i] with b[i].
+
+If a[i]>b[i], then Alice is awarded 1 point.
+If a[i]<b[i], then Bob is awarded 1 point.
+If a[i]=b[i], then neither person receives a point.
