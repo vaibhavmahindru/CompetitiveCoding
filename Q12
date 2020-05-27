@@ -1,0 +1,28 @@
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
+//SOLUTION
+
+import java.util.*;
+import java.lang.*;
+
+public class Solution{
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[][] arr = new int[n][n];
+        int fd = 0;
+        int sd = 0;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                arr[i][j] = in.nextInt();
+                if(i==j)
+                    fd += arr[i][j];
+
+                if(j == (arr.length-i-1))
+                    sd += arr[i][j]; 
+            }
+        }
+       
+        System.out.println(Math.abs(fd-sd));
+    }
+}
