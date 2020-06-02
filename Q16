@@ -1,0 +1,47 @@
+You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. When she blows out the candles, she’ll only be able to blow out the tallest ones. Your task is to find out how many candles she can successfully blow out.
+
+
+
+
+//SOLUTION
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+    
+        int arCount = scanner.nextInt();
+
+        int[] ar = new int[arCount];//array declaration
+
+        //array input
+        for (int i = 0; i < arCount; i++) {
+            ar[i] = scanner.nextInt();
+        }
+        int largest = 0;
+        //finding the largest number
+        for (int i = 0; i < arCount; i++) {
+            if(ar[i]>largest)
+                largest=ar[i];
+        }
+        int count = 0;
+        //counting the largest numbers occurence
+        for (int i = 0; i < arCount; i++) {
+            if(ar[i]==largest)
+                count++;
+        }
+        System.out.println(count);
+       
+    }
+}
