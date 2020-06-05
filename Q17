@@ -1,0 +1,31 @@
+Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+
+Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+
+
+//SOLUTION
+
+
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+    private static final Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) throws Exception {
+        
+        String s = scan.nextLine();
+
+         SimpleDateFormat displayFormat = new SimpleDateFormat("HH:mm:ss");// HH means 24 hour format.
+         SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mm:ssa");// hh means 12 hour format, a is for AM & PM. 
+         Date date = parseFormat.parse(s);
+         System.out.println(displayFormat.format(date));
+
+        
+    }
+}
